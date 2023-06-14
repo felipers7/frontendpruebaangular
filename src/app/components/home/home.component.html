@@ -1,0 +1,13 @@
+Te has logueado, este es el home!!!!
+<form [formGroup]="form" (ngSubmit)="submitForm($event)">
+		<input placeholder="latitud" formControlName="latitud">
+		<input placeholder="longitud" formControlName="longitud">
+		<button type="submit"> Buscar</button>
+</form>
+
+<div *ngIf="errorMessage" >{{ errorMessage }}</div>
+
+
+<div *ngIf="jsonData" >
+	<pre>{{ jsonData }}</pre>
+</div>

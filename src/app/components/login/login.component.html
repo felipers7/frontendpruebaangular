@@ -1,0 +1,7 @@
+<form [formGroup]="form" (ngSubmit)="submitForm($event)">
+		<input placeholder="user" formControlName="username">
+		<input placeholder="password" formControlName="password">
+		<button type="submit"> Login</button>
+</form>
+
+<div *ngIf="errorMessage" >{{ errorMessage }}</div>
